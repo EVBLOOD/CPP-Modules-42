@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 18:57:32 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/15 11:25:28 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/15 11:38:32 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class PhoneBook
 		void	set_contact(std::string firstname, std::string lastname,
 			std::string nickname, std::string phonenumber, std::string secret);
 		Contact	*get_contacts(void);
+		Contact	*searchfor(int indexing);
 		// void ADD(Contact *m_contacts);
 			// public:
 	// 	void ADD(void)

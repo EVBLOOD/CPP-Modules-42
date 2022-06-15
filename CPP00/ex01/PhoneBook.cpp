@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 10:24:04 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/15 11:21:44 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/15 11:39:06 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,28 +22,37 @@ void	PhoneBook::set_contact(std::string firstname, std::string lastname,
 	this->m_contacts[index].set_lastname(lastname);
 	(this->index)++;
 }
+
 Contact	*PhoneBook::get_contacts(void)
 {
 	return (this->m_contacts);
 }
-void PhoneBook::ADD(void)
-{
-	std::string	input;
 
-	std::cout << "First name :\n";
-	// std::cin >> input;
-	// this->m_firstname = input;
-	// std::cout << "Last name :\n";
-	// std::cin >> input;
-	// this->m_lastname = input;
-	// std::cout << "Nick name :\n";
-	// std::cin >> input;
-	// this->m_nickname = input;
-	// std::cout << "Phone number :\n";
-	// std::cin >> input;
-	// this->m_phone_number = input;
-	// std::cout << "Darkest secret :\n";
-	// std::cin >> input;
-	// this->m_darkest_secret = input;
+Contact	*PhoneBook::searchfor(int indexing)
+{
+	if (indexing > this->index || index < this->index)
+		return (NULL);
+	else
+		return (&(m_contacts[index]));
 }
+// void PhoneBook::ADD(void)
+// {
+// 	std::string	input;
+
+// 	std::cout << "First name :\n";
+// 	// std::cin >> input;
+// 	// this->m_firstname = input;
+// 	// std::cout << "Last name :\n";
+// 	// std::cin >> input;
+// 	// this->m_lastname = input;
+// 	// std::cout << "Nick name :\n";
+// 	// std::cin >> input;
+// 	// this->m_nickname = input;
+// 	// std::cout << "Phone number :\n";
+// 	// std::cin >> input;
+// 	// this->m_phone_number = input;
+// 	// std::cout << "Darkest secret :\n";
+// 	// std::cin >> input;
+// 	// this->m_darkest_secret = input;
+// }
 	// 	Contact SEARCH()
