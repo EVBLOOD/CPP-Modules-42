@@ -40,6 +40,11 @@ Contact	*PhoneBook::searchfor(int indexing)
 	else
 		return (&(m_contacts[index]));
 }
+
+int	PhoneBook::get_total(void)
+{
+	return (this->total);
+}
 // void PhoneBook::ADD(void)
 // {
 // 	std::string	input;

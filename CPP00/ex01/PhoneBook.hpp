@@ -23,6 +23,7 @@ class PhoneBook
 			std::string nickname, std::string phonenumber, std::string secret);
 		Contact	*get_contacts(void);
 		Contact	*searchfor(int indexing);
+		int		get_total(void);
 		// void ADD(Contact *m_contacts);
 			// public:
 	// 	void ADD(void)
