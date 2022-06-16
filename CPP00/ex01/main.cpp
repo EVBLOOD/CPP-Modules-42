@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 12:01:03 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/16 16:17:10 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/16 17:09:57 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,27 @@ int choiceismine(std::string input)
     return (1 );
 }
 
+void    ADD (PhoneBook *stupid)
+{
+    std::string fname;
+    std::string lname;
+    std::string nname;
+    std::string fnumber;
+    std::string dsecret;
+
+    std::cout << "First name :\n";
+	std::cin >> fname;
+	std::cout << "Last name :\n";
+	std::cin >> lname;
+	std::cout << "Nick name :\n";
+	std::cin >> nname;
+	std::cout << "Phone number :\n";
+	std::cin >> fnumber;
+	std::cout << "Darkest secret :\n";
+	std::cin >> dsecret;
+	stupid->set_contact(fname, lname, nname, fnumber, dsecret);
+}
+
 int main()
 {
     PhoneBook       stupid;
@@ -45,9 +66,7 @@ int main()
         if (choiceismine(input))
         {
             if (!input.compare("ADD"))
-            {
-                
-            }
+                ADD(&stupid);
             else if (input.compare("SEARCH"))
             {
 
