@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 12:01:03 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/16 15:56:58 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/16 16:17:10 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ void    everystart(void)
 
 int choiceismine(std::string input)
 {
-    if (input.compare("ADD") || input.compare("ADD") || input.compare("ADD"))
+    if (input.compare("ADD") || input.compare("EXIT") || input.compare("SEARCH"))
         return (0);
     return (1 );
 }
 
 int main()
 {
-    PhoneBook   stupid;
+    PhoneBook       stupid;
     std::string     input;
 
     std::cout << "My Awesome PhoneBook\n";
@@ -46,7 +46,7 @@ int main()
         {
             if (!input.compare("ADD"))
             {
-
+                
             }
             else if (input.compare("SEARCH"))
             {
