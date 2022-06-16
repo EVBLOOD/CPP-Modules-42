@@ -17,6 +17,7 @@ class PhoneBook
 	private:
 		Contact m_contacts[8];
 		int		index = 0;
+		int		total = 0;
 	public:
 		void	set_contact(std::string firstname, std::string lastname,
 			std::string nickname, std::string phonenumber, std::string secret);

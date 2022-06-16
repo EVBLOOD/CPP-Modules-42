@@ -20,7 +20,12 @@ void	PhoneBook::set_contact(std::string firstname, std::string lastname,
 	this->m_contacts[index].set_phone_number(phonenumber);
 	this->m_contacts[index].set_firstname(firstname);
 	this->m_contacts[index].set_lastname(lastname);
-	(this->index)++;
+	if (this->total < 8)
+		this->total++;
+	if (this->index < 9)
+		(this->index)++;
+	else
+		this->index = 0;
 }
 
 Contact	*PhoneBook::get_contacts(void)
