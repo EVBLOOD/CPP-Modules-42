@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 12:01:03 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/16 17:49:41 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/16 18:46:09 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,12 @@ void    everystart(void)
     std::cout << "----->  Display a specific contact\n";
     std::cout << "EXIT\n";
     std::cout << "-----> The program quits\n";
-    std::cout << "Make your choice!\n";
-    std::cout << "My Awesome PhoneBook\n";
+    std::cout << "Make your choice!    ";
 }
 
 int choiceismine(std::string input)
 {
-    if (input.compare("ADD") || input.compare("EXIT") || input.compare("SEARCH"))
+    if (input.compare("ADD") != 0 && input.compare("EXIT") != 0 && input.compare("SEARCH") != 0)
         return (0);
     return (1 );
 }
@@ -80,26 +79,43 @@ void    displaying(PhoneBook stupid)
     std::string a;
 
     x = stupid.get_contacts();
+    std::cout << "|"; std::cout << "index     "; std::cout << "|"; std::cout << "first name";
+    std::cout << "|"; std::cout << "last name "; std::cout << "|";
+    std::cout << "nickname  "; std::cout << "|\n";
     while (i < stupid.get_total())
     {
+        std::cout << "|"; std::cout << i; std::cout << "         ";
         a = x[i].get_firstname();
-        std::cout << a.substr(0, 9); std::cout << "|";
+        std::cout << "|"; mjustsaying(a); std::cout << "|";
         a = x[i].get_lastname();
-        std::cout << a.substr(0, 9); std::cout << "|";
-        a = x[i].get_darkest_secret();
-        std::cout << a.substr(0, 9); std::cout << "|";
+        mjustsaying(a); std::cout << "|";
         a = x[i].get_nickname();
-        std::cout << a.substr(0, 9); std::cout << "|";
-        a = x[i].get_phone_number();
-        std::cout << a.substr(0, 9); std::cout << "|";
+        mjustsaying(a); std::cout << "|";
         i++;
+        std::cout << "\n";
     }
-    
 }
 
 void    SEARCH(PhoneBook stupid)
 {
+    int     index;
+    Contact *theone;
+
     displaying(stupid);
+    std::cout << "The Contact INDEX you want to find\n";
+    std::cin >> index;
+    theone = stupid.searchfor(index);
+    if (!theone)
+        std::cout << "This one doesn't even exist\n";
+    else
+    {
+        std::cout << "index         :"; std::cout << index; std::cout << "\n";
+        std::cout << "first name    :"; std::cout << theone->get_firstname(); std::cout << "\n";
+        std::cout << "last name     :"; std::cout << theone->get_lastname(); std::cout << "\n";
+        std::cout << "nick name     :"; std::cout << theone->get_nickname(); std::cout << "\n";
+        std::cout << "phone number  :"; std::cout << theone->get_phone_number(); std::cout << "\n";
+        std::cout << "darkest secret:"; std::cout << theone->get_darkest_secret(); std::cout << "\n";
+    }
 }
 
 int main()
@@ -116,13 +132,14 @@ int main()
         {
             if (!input.compare("ADD"))
                 ADD(&stupid);
-            else if (input.compare("SEARCH"))
+            else if (!input.compare("SEARCH"))
                 SEARCH(stupid);
             else
                 break ;
         }
         else
             std::cout << "My Awesome PhoneBook doesn't have your choice\n";
+        input = "";
     }
     std::cout << "EXIT\n";
     return (1);
