@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 10:20:36 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/15 10:24:58 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/17 10:01:19 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,23 +34,23 @@ void Contact::set_darkest_secret(std::string darkest_secret)
 {
 	this->m_darkest_secret = darkest_secret;
 }
-std::string Contact::get_firstname(void)
+std::string Contact::get_firstname(void) const
 {
 	return (this->m_firstname);
 }
-std::string Contact::get_lastname(void)
+std::string Contact::get_lastname(void) const
 {
 	return (this->m_lastname);
 }
-std::string Contact::get_nickname(void)
+std::string Contact::get_nickname(void) const
 {
 	return (this->m_nickname);
 }
-std::string Contact::get_phone_number(void)
+std::string Contact::get_phone_number(void) const
 {
 	return (this->m_phone_number);
 }
-std::string Contact::get_darkest_secret(void)
+std::string Contact::get_darkest_secret(void) const
 {
 	return (this->m_darkest_secret);
 }

@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 18:59:40 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/15 10:25:19 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/17 10:00:42 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ class Contact
 		void		set_nickname(std::string nickname);
 		void		set_phone_number(std::string phone_number);
 		void		set_darkest_secret(std::string darkest_secret);
-		std::string	get_firstname(void);
-		std::string get_lastname(void);
-		std::string get_nickname(void);
-		std::string get_phone_number(void);
-		std::string get_darkest_secret(void);
+		std::string	get_firstname(void) const;
+		std::string get_lastname(void) const;
+		std::string get_nickname(void) const;
+		std::string get_phone_number(void) const;
+		std::string get_darkest_secret(void) const;
 };
