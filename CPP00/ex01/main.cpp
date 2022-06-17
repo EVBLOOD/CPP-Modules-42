@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 12:01:03 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/17 12:15:01 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/17 12:26:04 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ void    everystart(void)
     std::cout << "----->  Display a specific contact\n";
     std::cout << "EXIT\n";
     std::cout << "-----> The program quits\n";
-    std::cout << "Make your choice!    ";
+    std::cout << "Make your choice!\n\n";
+    std::cout << "$choice> ";
 }
 
 int choiceismine(std::string input)
@@ -41,16 +42,52 @@ void    ADD (PhoneBook &stupid)
     std::string dsecret;
 
     std::cout << "First name :\n";
-	std::getline(std::cin, fname);
+    if (!std::getline(std::cin, fname))
+    {
+        if (std::cin.eof())
+            std::cout << "EOF, where I should write!!!!!!!!!\n";
+        else    
+            std::cout << "geting the line failure";
+        exit (0);
+    }
 	std::cout << "Last name :\n";
-	std::getline(std::cin, lname);
+    if (!std::getline(std::cin, lname))
+    {
+        if (std::cin.eof())
+            std::cout << "EOF, where I should write!!!!!!!!!\n";
+        else    
+            std::cout << "geting the line failure";
+        exit (0);
+    }
 	std::cout << "Nick name :\n";
-	std::getline (std::cin, fname);
+    if (!std::getline (std::cin, fname))
+    {
+        if (std::cin.eof())
+            std::cout << "EOF, where I should write!!!!!!!!!\n";
+        else    
+            std::cout << "geting the line failure";
+        exit (0);
+    }
 	std::cout << "Phone number :\n";
-	std::getline (std::cin, fnumber);
+     if (!std::getline (std::cin, fnumber))
+    {
+        if (std::cin.eof())
+            std::cout << "EOF, where I should write!!!!!!!!!\n";
+        else    
+            std::cout << "geting the line failure";
+        exit (0);
+    }
 	std::cout << "Darkest secret :\n";
-	std::getline (std::cin, dsecret);
+    if (!std::getline (std::cin, dsecret))
+    {
+        if (std::cin.eof())
+            std::cout << "EOF, where I should write!!!!!!!!!\n";
+        else    
+            std::cout << "geting the line failure";
+        exit (0);
+    }
 	stupid.set_contact(fname, lname, nname, fnumber, dsecret);
+    std::cout << "\n\n\n\n";
 }
 
 void    mjustsaying(std::string what)
@@ -82,7 +119,6 @@ void    displaying(const PhoneBook &stupid)
     std::cout << "|"; std::cout << "index     "; std::cout << "|"; std::cout << "first name";
     std::cout << "|"; std::cout << "last name "; std::cout << "|";
     std::cout << "nickname  "; std::cout << "|\n";
-    std::cout << stupid.get_total();
     while (i < stupid.get_total())
     {
         std::cout << "|"; std::cout << i; std::cout << "         ";
@@ -103,8 +139,16 @@ void    SEARCH(PhoneBook &stupid)
     std::string line;
 
     displaying(stupid);
+    std::cout << "\n\n\n\n";
     std::cout << "The Contact INDEX you want to find\n";
-    std::getline (std::cin, line);
+    if (!std::getline (std::cin, line))
+    {
+        if (std::cin.eof())
+            std::cout << "EOF, where I should write!!!!!!!!!\n";
+        else    
+            std::cout << "geting the line failure";
+        exit (0);
+    }
     try
     {
         index = std::stoi(line);
@@ -126,6 +170,7 @@ void    SEARCH(PhoneBook &stupid)
         std::cout << "phone number  :"; std::cout << theone->get_phone_number(); std::cout << "\n";
         std::cout << "darkest secret:"; std::cout << theone->get_darkest_secret(); std::cout << "\n";
     }
+    std::cout << "\n\n\n\n";
 }
 
 int main()
@@ -140,12 +185,14 @@ int main()
         everystart();
         if (!std::getline (std::cin,input))
         {
+            std::cout << "\n";
             if (std::cin.eof())
                 std::cout << "EOF, where I should write!!!!!!!!!\n";
             else    
                 std::cout << "geting the line failure";
             exit (0);
         }
+        std::cout << "\n\n\n\n";
         if (choiceismine(input))
         {
             if (!input.compare("ADD"))
@@ -156,7 +203,7 @@ int main()
                 break ;
         }
         else
-            std::cout << "My Awesome PhoneBook doesn't have your choice\n";
+            std::cout << "My Awesome PhoneBook doesn't have your choice\n\n\n\n\n";
     }
     std::cout << "EXIT\n";
     return (1);
