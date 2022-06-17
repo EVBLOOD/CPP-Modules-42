@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 12:01:03 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/17 12:36:06 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/17 14:20:14 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void    ADD (PhoneBook &stupid)
         exit (0);
     }
 	std::cout << "Nick name :\n";
-    if (!std::getline (std::cin, fname))
+    if (!std::getline (std::cin, nname))
     {
         if (std::cin.eof())
             std::cout << "EOF, where I should write!!!!!!!!!\n";
@@ -95,13 +95,13 @@ void    mjustsaying(std::string &what)
     int i;
     if (what.length() > 10)
     {
-        std::cout << what.substr(0, 8);
+        std::cout << what.substr(0, 9);
         std::cout << ".";
     }
     else
     {
-        i = 0;
-        std::cout << what.substr(0, what.length() - 1);
+        i = 1;
+        std::cout << what.substr(0, what.length());
         while (what.length() + i <= 10)
         {
            std::cout << " ";
