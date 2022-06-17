@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 12:01:03 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/17 12:26:04 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/17 12:36:06 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void    ADD (PhoneBook &stupid)
     std::cout << "\n\n\n\n";
 }
 
-void    mjustsaying(std::string what)
+void    mjustsaying(std::string &what)
 {
     int i;
     if (what.length() > 10)
@@ -116,9 +116,12 @@ void    displaying(const PhoneBook &stupid)
     const Contact     *x = stupid.get_contacts();;
     std::string a;
 
+    if (stupid.get_total() == 0)
+        return ;
     std::cout << "|"; std::cout << "index     "; std::cout << "|"; std::cout << "first name";
     std::cout << "|"; std::cout << "last name "; std::cout << "|";
     std::cout << "nickname  "; std::cout << "|\n";
+    i = 0;
     while (i < stupid.get_total())
     {
         std::cout << "|"; std::cout << i; std::cout << "         ";
