@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 10:24:04 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/17 16:33:15 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/18 17:30:33 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ void	PhoneBook::set_contact(std::string firstname, std::string lastname,
 	this->m_contacts[index].set_lastname(lastname);
 	if (this->total < 8)
 		this->total++;
-	// if (this->index < 9)
-		(this->index)++;
+	(this->index)++;
 }
 
 const Contact	*PhoneBook::get_contacts(void) const
@@ -39,9 +38,7 @@ const Contact	*PhoneBook::searchfor(int indexing) const
 	if (indexing > this->total || indexing < 0)
 		return (NULL);
 	else
-	{
 		return (&(m_contacts[indexing]));
-	}
 }
 
 int	PhoneBook::get_total(void) const
