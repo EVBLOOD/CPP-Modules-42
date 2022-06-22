@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:42:51 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/22 14:57:21 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/22 15:17:03 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ int main(int argc, char **argv)
     if (new_file.is_open() == false)
     {
         std::cout << "error while opening the file\n";
+        return (1);
+    }
+    if (file.peek() == EOF)
+    {
+        std::cerr << "emptyyyyyyyyyyy!";
         return (1);
     }
     string line;
