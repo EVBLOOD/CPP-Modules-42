@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:42:51 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/22 14:57:21 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/22 14:53:58 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main(int argc, char **argv)
         std::cout << "error while opening the file\n";
         return (1);
     }
-    string name(string(argv[1]) + ".replace");
+    string name = string(argv[1]) + string(".replace");
     std::ofstream new_file(name.c_str());
     if (new_file.is_open() == false)
     {
@@ -41,7 +41,7 @@ int main(int argc, char **argv)
     while (getline(file, line))
     {
         cout << line << "\n";
-        // new_file << line.replace() << '\n';
+        new_file << line << '\n';
     }
     return (0);
 }
