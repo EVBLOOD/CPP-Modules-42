@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 10:43:14 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/22 10:45:25 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/22 11:32:26 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 
 Weapon::Weapon()
 {
+    
+}
+
+Weapon::Weapon(std::string name)
+{
+    this->type = name;
 }
 
 Weapon::~Weapon()
