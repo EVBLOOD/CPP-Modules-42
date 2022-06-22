@@ -6,16 +6,25 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:42:51 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/22 15:17:03 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/22 18:13:56 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <regex>
+#include <iterator>
 
 using std::string;
 using std::cout;
+
+string sanitizer(string input) 
+{
+  std::regex special_chars("[.^$|()\\[\\]{}*+?\\\\]");
+  string sanitized = std::regex_replace(input, special_chars, "\\$&");
+  return (sanitized);
+}
 
 int main(int argc, char **argv)
 {
@@ -43,10 +52,10 @@ int main(int argc, char **argv)
         return (1);
     }
     string line;
+    std::string rego = sanitizer(string(argv[2]));
     while (getline(file, line))
     {
-        cout << line << "\n";
-        // new_file << line.replace() << '\n';
+        new_file << std::regex_replace(line, std::regex(rego), string(argv[3])) << "\n";
     }
     return (0);
 }
