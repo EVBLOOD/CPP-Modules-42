@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 10:47:56 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/22 11:30:49 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/22 11:38:23 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 HumanA::HumanA(std::string name, Weapon &x) : slah(x)
 {
-    // this->slah = x;
     this->name = name;
 }
 
