@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/23 14:12:28 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/23 14:13:16 by sakllam          ###   ########.fr       */
+/*   Created: 2022/06/22 21:25:05 by sakllam           #+#    #+#             */
+/*   Updated: 2022/06/23 15:35:06 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ private:
     static const int y = 8;
 public:
     Fixed();
-    Fixed(Fixed &x);
+    Fixed(const Fixed &x);
     ~Fixed();
-    void operator= (const Fixed &x);
+    Fixed *operator= (const Fixed &x);
     int getRawBits( void ) const;
     void setRawBits( int const raw );
 };
