@@ -17,10 +17,10 @@ private:
     static const int y = 8;
 public:
     Fixed();
+    Fixed(Fixed &x);
     ~Fixed();
+    void operator= (const Fixed &x);
+    int getRawBits( void ) const;
+    void setRawBits( int const raw );
 };
 
-
-Fixed::~Fixed()
-{
-}
