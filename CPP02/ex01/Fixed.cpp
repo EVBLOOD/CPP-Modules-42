@@ -6,12 +6,13 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 21:24:51 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/23 16:04:30 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/23 16:33:14 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <iostream>
+#include <cmath>
 using std::cout;
 
 Fixed::Fixed() : x(0)
@@ -21,7 +22,7 @@ Fixed::Fixed() : x(0)
 
 Fixed::Fixed(float number)
 {
-    x = static_cast<int>(number) * 256;
+    x =  (int)(roundf(number * powf(2, y)));
 }
 
 Fixed::~Fixed()
@@ -57,15 +58,17 @@ Fixed *Fixed::operator= (const Fixed &x)
 
 float Fixed::toFloat( void ) const
 {
-    return static_cast<float>(x >> 8) ;
+    cout << "test1 " << (int)x << " " << (float)x << '\n';
+    cout << "test2 " << (int)x / 256 << " " << (float)x / 256 << '\n';
+    return (float)(x) / powf(2, y);
 }
 
 int Fixed::toInt( void ) const
 {
-    return (x / 256);
+    return x / powf(2, y);
 }
 
 std::ostream &operator<<(std::ostream &x, Fixed const &name)
 {
-    return x << name.toFloat();
+    return x << (float)name.toFloat();
 }
