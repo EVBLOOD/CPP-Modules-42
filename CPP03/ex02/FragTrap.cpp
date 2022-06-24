@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/24 16:03:49 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/24 20:23:47 by sakllam          ###   ########.fr       */
+/*   Created: 2022/06/24 20:18:24 by sakllam           #+#    #+#             */
+/*   Updated: 2022/06/24 20:26:03 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
-class ScavTrap : ClapTrap
+FragTrap::~FragTrap()
 {
-    public:
-        ~ScavTrap();
-        void guardGate();
-        ScavTrap(string name);
-};
+    cout << "FlaTrap: the deconst... was called\n";
+}
 
-
-
-ScavTrap::~ScavTrap()
+FragTrap::FragTrap(string name) : ClapTrap(name, 100, 100, 30)
 {
+    cout << "FlaTrap: the conster... was called\n";
+}
+
+void FragTrap::highFivesGuys(void)
+{
+    cout << "highFivesGuys!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n";
 }

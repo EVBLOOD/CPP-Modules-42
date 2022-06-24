@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/24 16:03:49 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/24 20:23:47 by sakllam          ###   ########.fr       */
+/*   Created: 2022/06/24 20:18:27 by sakllam           #+#    #+#             */
+/*   Updated: 2022/06/24 20:24:55 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : ClapTrap
+class FragTrap : ClapTrap
 {
     public:
-        ~ScavTrap();
-        void guardGate();
-        ScavTrap(string name);
+        FragTrap(string name);
+        ~FragTrap();
+        void highFivesGuys(void);
 };
 
 
-
-ScavTrap::~ScavTrap()
-{
-}

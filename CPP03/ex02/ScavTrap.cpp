@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/24 16:03:49 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/24 20:23:47 by sakllam          ###   ########.fr       */
+/*   Created: 2022/06/24 16:03:46 by sakllam           #+#    #+#             */
+/*   Updated: 2022/06/24 18:06:59 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
-class ScavTrap : ClapTrap
+ScavTrap::ScavTrap(string name, int energy_points, int hit_points, int attack_damage) : ClapTrap(name, energy_points, hit_points, attack_damage) 
 {
-    public:
-        ~ScavTrap();
-        void guardGate();
-        ScavTrap(string name);
-};
-
-
-
-ScavTrap::~ScavTrap()
-{
+    cout << "this constrac.. has been called!\n";
 }
+
+void    ScavTrap::guardGate()
+{
+    cout << "ScavTrap " << this->getname() << " is now in Gate keeper mode.\n";
+}
+
+
