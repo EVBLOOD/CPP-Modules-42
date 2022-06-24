@@ -6,13 +6,11 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 13:45:53 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/24 16:01:18 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/24 17:57:24 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-
-
 
 ClapTrap::ClapTrap(string name) : energy_points(10), hit_points(10), attack_damage(0)
 {

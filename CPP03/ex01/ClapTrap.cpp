@@ -6,13 +6,20 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 13:45:53 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/24 16:01:18 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/24 17:57:33 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-
+ClapTrap::ClapTrap(string name, int energy_points, int hit_points, int attack_damage)
+{
+    cout << "the constrac.. has been called!\n";
+    this->attack_damage = attack_damage;
+    this->energy_points = energy_points;
+    this->hit_points = hit_points;
+    this->name = name;
+}
 
 ClapTrap::ClapTrap(string name) : energy_points(10), hit_points(10), attack_damage(0)
 {
