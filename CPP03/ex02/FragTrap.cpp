@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 20:18:24 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/24 20:26:03 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/24 20:44:10 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ FragTrap::FragTrap(string name) : ClapTrap(name, 100, 100, 30)
 
 void FragTrap::highFivesGuys(void)
 {
-    cout << "highFivesGuys!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n";
+    cout << "High fives guys!!!!!!!\n";
 }
