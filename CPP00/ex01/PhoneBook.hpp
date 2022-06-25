@@ -6,11 +6,12 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 18:57:32 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/17 16:26:58 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/25 22:01:39 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
+#include <cstdlib>
 
 class PhoneBook
 {
