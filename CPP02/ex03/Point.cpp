@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 20:59:09 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/27 21:10:02 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/27 22:38:35 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Point::Point(float x, float y) : x(x), y(y)
     
 }
 
-Point::Point(const Point &p) : x(p.x), y(p.x)
+Point::Point(const Point &p) : x(p.x), y(p.y)
 {
     
 }
