@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 14:12:30 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/24 12:07:20 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/27 22:37:47 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,7 @@ int main( void )
     std::cout << c << std::endl;
     c = Fixed::min(x, y);
     std::cout << c << std::endl;
+    Fixed n(-1);
+    std::cout << n.toFloat() << std::endl;
     return 0;
 }
