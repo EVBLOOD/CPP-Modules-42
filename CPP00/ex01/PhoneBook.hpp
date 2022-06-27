@@ -6,10 +6,11 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 18:57:32 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/25 22:01:39 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/27 12:25:43 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include "Contact.hpp"
 #include <cstdlib>
 
