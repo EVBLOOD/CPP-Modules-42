@@ -6,11 +6,11 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 18:59:40 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/17 10:00:42 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/27 10:23:04 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//don't forget to add define!
+#pragma once
 
 # include <string>
 # include <iostream>

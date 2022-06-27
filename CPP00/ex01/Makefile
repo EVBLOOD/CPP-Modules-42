@@ -6,7 +6,7 @@
 #    By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/25 21:47:47 by sakllam           #+#    #+#              #
-#    Updated: 2022/06/25 22:11:11 by sakllam          ###   ########.fr        #
+#    Updated: 2022/06/27 10:23:12 by sakllam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ FLAGS = -Wall -Werror -Wextra -std=c++98
 all: $(NAME)
 
 $(NAME): $(SRC) $(INC)
-	c++ $(FLAGS) $(SRC) -L $(INC) -o $(NAME)
+	c++ $(FLAGS) $(SRC) -o $(NAME)
 
 clean:
 	rm -rf $(NAME)
