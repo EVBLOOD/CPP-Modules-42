@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 13:53:01 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/21 14:38:50 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/27 10:38:09 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,5 @@ int main()
         i++;
     }
     delete [] testone;
-    system ("leaks a.out");
     return (1);
 }

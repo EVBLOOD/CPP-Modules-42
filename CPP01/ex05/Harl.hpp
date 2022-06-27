@@ -6,10 +6,11 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 18:17:52 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/22 18:55:22 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/27 10:49:28 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include <string>
 
 class Harl
