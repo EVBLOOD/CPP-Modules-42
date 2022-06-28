@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 16:03:46 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/24 20:23:14 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/28 12:31:20 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void    ScavTrap::guardGate()
     cout << "ScavTrap " << this->getname() << " is now in Gate keeper mode.\n";
 }
 
-ScavTrap::~ClapTrap()
+ScavTrap::~ScavTrap()
 {
     cout << "ScavTrap: this dconstrac.. has been called!\n";
 }
