@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 13:45:53 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/24 17:57:33 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/28 17:31:48 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,42 @@ void ClapTrap::beRepaired(unsigned int amount)
 string ClapTrap::getname(void) const
 {
     return (this->name);
+}
+
+int    ClapTrap::gethitpoint(void) const
+{
+    return (this->hit_points);
+}
+int    ClapTrap::get_energypoints(void) const
+{
+    return (this->energy_points);
+}
+int    ClapTrap::get_attackdamage(void) const
+{
+    return (this->attack_damage);
+}
+void ClapTrap::setname(string s)
+{
+    this->name = s;
+}
+void   ClapTrap::sethitpoint(int x)
+{
+    this->hit_points = x;
+}
+void   ClapTrap::set_energypoints(int x)
+{
+    this->energy_points = x;
+}
+void   ClapTrap::set_attackdamage(int x)
+{
+    this->attack_damage = x;
+}
+
+ClapTrap *ClapTrap::operator=(ClapTrap &x)
+{
+    this->attack_damage = x.attack_damage;
+    this->energy_points = x.energy_points;
+    this->name = x.name;
+    this->hit_points = x.hit_points;
+    return (this);    
 }

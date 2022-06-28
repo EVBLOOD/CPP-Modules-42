@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 13:45:53 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/28 17:31:13 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/28 17:58:09 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ ClapTrap::ClapTrap(string name, int energy_points, int hit_points, int attack_da
     this->name = name;
 }
 
-ClapTrap::ClapTrap(string name) : hit_points(10), energy_points(10), attack_damage(0)
+ClapTrap::ClapTrap(string name) : energy_points(10), hit_points(10), attack_damage(0)
 {
     cout << "the constrac.. has been called!\n";
     this->name = name;
@@ -107,4 +107,9 @@ ClapTrap *ClapTrap::operator=(ClapTrap &x)
     this->name = x.name;
     this->hit_points = x.hit_points;
     return (this);    
+}
+
+ClapTrap::ClapTrap()
+{
+    
 }

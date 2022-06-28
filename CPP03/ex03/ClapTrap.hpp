@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 13:41:57 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/28 17:32:29 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/28 17:57:54 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class ClapTrap
         ClapTrap::ClapTrap(string name, int energy_points, int hit_points, int attack_damage);
         string getname(void) const;
         ClapTrap(string name);
+        ClapTrap();
         ~ClapTrap();
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);
