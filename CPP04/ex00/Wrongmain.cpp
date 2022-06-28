@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Wrongmain.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 21:33:37 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/28 22:10:50 by sakllam          ###   ########.fr       */
+/*   Created: 2022/06/28 22:28:42 by sakllam           #+#    #+#             */
+/*   Updated: 2022/06/28 22:29:34 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <string>
-#include <iostream>
+#include "WrongCat.hpp"
 
-class Animal
+int main()
 {
-    protected:
-        std::string type;
-    public:
-        std::string getType(void) const;
-        Animal(std::string t);
-        Animal(Animal &a);
-        void setType(std::string type);
-        Animal *operator=(Animal &x);
-        Animal();
-        ~Animal();
-        virtual void makeSound(void) const;
-};
+    const WrongAnimal* meta = new WrongAnimal();
+    const WrongAnimal* i = new WrongCat();
+    std::cout << i->getType() << " " << std::endl;
+    i->makeSound();
+    meta->makeSound();
+
+    return 0;
+}

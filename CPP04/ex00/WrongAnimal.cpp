@@ -1,51 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 21:45:39 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/28 22:11:12 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/28 22:17:26 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-std::string Animal::getType(void) const
+std::string WrongAnimal::getType(void) const
 {
     return (this->type);
 }
 
-Animal::Animal(std::string t)
+WrongAnimal::WrongAnimal(std::string t)
 {
     type = t;
 }
 
-Animal::Animal(Animal &a)
+WrongAnimal::WrongAnimal(WrongAnimal &a)
 {
     type = a.type;
 }
 
-void Animal::setType(std::string type)
+void WrongAnimal::setType(std::string type)
 {
     this->type = type;
 }
-Animal *Animal::operator=(Animal &x)
+WrongAnimal *WrongAnimal::operator=(WrongAnimal &x)
 {
     x.type = this->type;
     return (this);
 }
-Animal::Animal()
+WrongAnimal::WrongAnimal()
 {
     
 }
-Animal::~Animal()
+WrongAnimal::~WrongAnimal()
 {
     
 }
 
-void Animal::makeSound(void) const
+void WrongAnimal::makeSound(void) const
 {
     std::cout << "eeeeeeh!\n";
 }
