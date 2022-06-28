@@ -6,10 +6,11 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 13:41:57 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/28 12:33:41 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/28 20:08:24 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include <string>
 #include <iostream>
 

@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 13:45:53 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/28 17:58:09 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/28 20:01:34 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 ClapTrap::ClapTrap(string name, int energy_points, int hit_points, int attack_damage)
 {
-    cout << "the constrac.. has been called!\n";
+    cout << "ClapTrap: the constrac.. has been called!\n";
     this->attack_damage = attack_damage;
     this->energy_points = energy_points;
     this->hit_points = hit_points;
     this->name = name;
 }
 
-ClapTrap::ClapTrap(string name) : energy_points(10), hit_points(10), attack_damage(0)
+ClapTrap::ClapTrap(string name) : hit_points(10), energy_points(10), attack_damage(0)
 {
     cout << "the constrac.. has been called!\n";
     this->name = name;
@@ -29,7 +29,7 @@ ClapTrap::ClapTrap(string name) : energy_points(10), hit_points(10), attack_dama
 
 ClapTrap::~ClapTrap()
 {
-    cout << "the deconstrac.. has been called!\n";
+    cout << "ClapTrap: the deconstrac.. has been called!\n";
 }
 
 void    ClapTrap::attack(const std::string& target)

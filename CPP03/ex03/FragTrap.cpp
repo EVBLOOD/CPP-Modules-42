@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 20:18:24 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/28 17:57:14 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/28 19:59:59 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 FragTrap::FragTrap()
 {
-    
+    cout << "FlaTrap: the conster... was called\n";
 }
 
 FragTrap::~FragTrap()
@@ -29,5 +29,5 @@ FragTrap::FragTrap(string name) : ClapTrap(name, 100, 100, 30)
 
 void FragTrap::highFivesGuys(void)
 {
-    cout << "High fives guys!!!!!!!\n";
+    cout << "FlaTrap: High fives guys!!!!!!!\n";
 }

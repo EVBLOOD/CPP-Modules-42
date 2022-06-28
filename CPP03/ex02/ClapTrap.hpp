@@ -6,10 +6,11 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 13:41:57 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/28 17:32:29 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/28 20:07:19 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include <string>
 #include <iostream>
 
@@ -24,7 +25,7 @@ class ClapTrap
         int     energy_points;
         int     attack_damage;
     public:
-        ClapTrap::ClapTrap(string name, int energy_points, int hit_points, int attack_damage);
+        ClapTrap(string name, int energy_points, int hit_points, int attack_damage);
         string getname(void) const;
         ClapTrap(string name);
         ~ClapTrap();

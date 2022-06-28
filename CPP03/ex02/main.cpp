@@ -6,16 +6,16 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 14:56:59 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/24 15:39:06 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/28 20:05:16 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
-    ClapTrap a("not me!");    
-    ClapTrap b("nither this one!");
+    FragTrap a("not me!");    
+    FragTrap b("nither this one!");
 
     a.attack(b.getname());
     b.takeDamage(1);
@@ -25,4 +25,6 @@ int main()
     b.takeDamage(1);
     a.beRepaired(10);
     b.attack(a.getname());
+    a.highFivesGuys();
+    b.highFivesGuys();
 }

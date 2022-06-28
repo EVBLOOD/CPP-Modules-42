@@ -6,15 +6,15 @@
 #    By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/28 18:49:04 by sakllam           #+#    #+#              #
-#    Updated: 2022/06/28 18:49:32 by sakllam          ###   ########.fr        #
+#    Updated: 2022/06/28 20:02:08 by sakllam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ClapTrap
+NAME = DiamondTrap
 
-SRC =	ClapTrap.cpp ScavTrap.cpp main.cpp
+SRC =	ClapTrap.cpp    DiamondTrap.cpp FragTrap.cpp    ScavTrap.cpp	main.cpp
 
-INC = ClapTrap.hpp ScavTrap.hpp
+INC = ClapTrap.hpp    DiamondTrap.hpp FragTrap.hpp    ScavTrap.hpp
 
 FLAGS = -Wall -Werror -Wextra -std=c++98
 

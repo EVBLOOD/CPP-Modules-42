@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 16:03:46 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/28 17:58:47 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/28 19:59:44 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ScavTrap::ScavTrap(string name, int energy_points, int hit_points, int attack_damage) : ClapTrap(name, energy_points, hit_points, attack_damage) 
 {
-    cout << "this constrac.. has been called!\n";
+    cout << "ScavTrap: this constrac.. has been called!\n";
 }
 
 void    ScavTrap::guardGate()
@@ -24,11 +24,17 @@ void    ScavTrap::guardGate()
 
 ScavTrap::ScavTrap()
 {
-    
+    cout << "ScavTrap: the conster... was called\n";
+}
+
+ScavTrap::ScavTrap(string name) : ClapTrap(name)
+{  
+    cout << "ScavTrap: the conster... was called\n";
 }
 
 ScavTrap::~ScavTrap()
 {
+    cout << "ScavTrap: the dister... was called\n";
 }
 
 

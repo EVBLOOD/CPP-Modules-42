@@ -6,11 +6,11 @@
 #    By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/28 12:21:18 by sakllam           #+#    #+#              #
-#    Updated: 2022/06/28 12:21:44 by sakllam          ###   ########.fr        #
+#    Updated: 2022/06/28 20:09:10 by sakllam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ClapTrap
+NAME = ScavTrap
 
 SRC =	ClapTrap.cpp ScavTrap.cpp main.cpp
 
