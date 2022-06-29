@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 14:45:51 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/29 16:20:43 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/29 17:24:04 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,9 @@ void Cure::use(ICharacter& target)
 AMateria* Cure::clone() const
 {
     return new Cure();
+}
+
+Cure::Cure(std::string ok) : AMateria(ok)
+{
+    
 }

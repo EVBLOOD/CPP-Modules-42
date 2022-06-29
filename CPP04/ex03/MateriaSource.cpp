@@ -1,20 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MaeriaSource.cpp                                   :+:      :+:    :+:   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:09:27 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/29 17:09:42 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/29 17:41:53 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
-
-MateriaSource::MateriaSource()
-{
-}
 
 MateriaSource::~MateriaSource()
 {
@@ -58,4 +54,26 @@ MateriaSource *MateriaSource::operator=(MateriaSource &x)
          this->slote[i] = NULL;
     }
     return (this);
+}
+
+void MateriaSource::learnMateria(AMateria* x)
+{
+    if (equipMAt == 4)
+        return ;
+    this->slote[equipMAt] = x;
+    equipMAt++;
+}
+
+AMateria* MateriaSource::createMateria(std::string const & type)
+{
+    AMateria *x = NULL;
+    if (type.compare("cure"))
+    {
+        x = new Cure(type);
+    }
+    else if (type.compare("ice"))
+    {
+        x = new Ice(type);
+    }
+    return (x);
 }

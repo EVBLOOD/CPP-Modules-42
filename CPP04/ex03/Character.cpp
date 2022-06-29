@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 16:49:35 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/29 16:50:16 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/29 17:39:06 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ Character *Character::operator=(Character &x)
     if (&x == this)
         return (this);
     this->equipMAt = x.equipMAt;
-    this->name = name;
+    this->name = x.name;
     for (int i = 0; i < 4; i++)
     {
         delete this->slote[i];

@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 14:17:18 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/29 14:52:49 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/29 17:23:53 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ Ice::~Ice()
 {
 }
 
+Ice::Ice(std::string ok) : AMateria(ok)
+{
+    
+}
 
 void Ice::use(ICharacter& target)
 {

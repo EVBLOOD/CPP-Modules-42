@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 14:01:28 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/29 14:54:59 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/29 17:33:41 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ AMateria::AMateria()
 
 AMateria *AMateria::operator=(AMateria &x)
 {
+    (void)x;
     // this->types = x.types; doesn't make sence! galoha.
     return (this);
 }
