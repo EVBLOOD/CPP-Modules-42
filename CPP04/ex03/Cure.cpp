@@ -1,29 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 22:38:00 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/29 13:59:14 by sakllam          ###   ########.fr       */
+/*   Created: 2022/06/29 14:45:51 by sakllam           #+#    #+#             */
+/*   Updated: 2022/06/29 16:20:43 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <string>
-using std::string;
+#include "Cure.hpp"
+#include <iostream>
 
-class Brain
+Cure::Cure()
 {
-    private:
-        string ideas[100];
-    public:
-        string const *getIdeas() const;
-        void   setIdeas(string *fikra, int nb);
-        Brain(string *ideas, int nb);
-        Brain(Brain &afkar);
-        Brain *operator=(Brain &x);
-        Brain();
-        ~Brain();
-};
+    
+}
+
+Cure::Cure(Cure &x)
+{
+    (void)x;    
+}
+
+Cure::~Cure()
+{
+}
+
+Cure *Cure::operator=(Cure &x)
+{
+    (void)x;
+    return (this);
+}
+
+void Cure::use(ICharacter& target)
+{
+    std::cout << "* heals " << target.getName() << "'s wounds *\n";
+}
+
+AMateria* Cure::clone() const
+{
+    return new Cure();
+}

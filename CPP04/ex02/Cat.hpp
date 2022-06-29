@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 22:38:00 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/29 13:59:14 by sakllam          ###   ########.fr       */
+/*   Created: 2022/06/28 21:12:05 by sakllam           #+#    #+#             */
+/*   Updated: 2022/06/28 22:10:59 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include <string>
-using std::string;
+#include "Animal.hpp"
 
-class Brain
+class Cat : public Animal
 {
-    private:
-        string ideas[100];
+    // private:
+    //     /* data */
     public:
-        string const *getIdeas() const;
-        void   setIdeas(string *fikra, int nb);
-        Brain(string *ideas, int nb);
-        Brain(Brain &afkar);
-        Brain *operator=(Brain &x);
-        Brain();
-        ~Brain();
+        Cat(std::string t);
+        Cat(Cat &a);
+        Cat *operator=(Cat &x);
+        Cat();
+        ~Cat();
+        void makeSound(void) const;
 };

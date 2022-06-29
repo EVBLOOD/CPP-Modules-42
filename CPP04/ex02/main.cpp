@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 22:38:00 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/29 13:59:14 by sakllam          ###   ########.fr       */
+/*   Created: 2022/06/28 22:02:12 by sakllam           #+#    #+#             */
+/*   Updated: 2022/06/29 12:55:59 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <string>
-using std::string;
+#include "Cat.hpp"
+#include "Dog.hpp"
 
-class Brain
+int main()
 {
-    private:
-        string ideas[100];
-    public:
-        string const *getIdeas() const;
-        void   setIdeas(string *fikra, int nb);
-        Brain(string *ideas, int nb);
-        Brain(Brain &afkar);
-        Brain *operator=(Brain &x);
-        Brain();
-        ~Brain();
-};
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
+    std::cout << j->getType() << " " << std::endl;
+    std::cout << i->getType() << " " << std::endl;
+    i->makeSound(); //will output the cat sound!
+    j->makeSound();
+
+    return 0;
+}

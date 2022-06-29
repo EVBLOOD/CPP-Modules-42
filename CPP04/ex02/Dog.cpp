@@ -1,29 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 22:38:00 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/29 13:59:14 by sakllam          ###   ########.fr       */
+/*   Created: 2022/06/28 21:49:24 by sakllam           #+#    #+#             */
+/*   Updated: 2022/06/28 22:11:23 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <string>
-using std::string;
+#include "Dog.hpp"
 
-class Brain
+Dog::Dog(std::string t)  : Animal("Dog")
 {
-    private:
-        string ideas[100];
-    public:
-        string const *getIdeas() const;
-        void   setIdeas(string *fikra, int nb);
-        Brain(string *ideas, int nb);
-        Brain(Brain &afkar);
-        Brain *operator=(Brain &x);
-        Brain();
-        ~Brain();
-};
+    (void)t;
+}
+
+Dog::Dog(Dog &a) : Animal("Dog")
+{
+    (void) a;
+}
+Dog *Dog::operator=(Dog &x)
+{
+    (void)x;
+    return (this);
+}
+Dog::Dog() : Animal("Dog")
+{
+    
+}
+
+Dog::~Dog()
+{
+}
+
+void Dog::makeSound(void) const
+{
+    std::cout << "Dogs bark :v\n";
+}

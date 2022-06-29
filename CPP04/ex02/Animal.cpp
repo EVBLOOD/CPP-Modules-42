@@ -1,29 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 22:38:00 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/29 13:59:14 by sakllam          ###   ########.fr       */
+/*   Created: 2022/06/28 21:45:39 by sakllam           #+#    #+#             */
+/*   Updated: 2022/06/29 12:53:55 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <string>
-using std::string;
+#include "Animal.hpp"
 
-class Brain
+std::string Animal::getType(void) const
 {
-    private:
-        string ideas[100];
-    public:
-        string const *getIdeas() const;
-        void   setIdeas(string *fikra, int nb);
-        Brain(string *ideas, int nb);
-        Brain(Brain &afkar);
-        Brain *operator=(Brain &x);
-        Brain();
-        ~Brain();
-};
+    return (this->type);
+}
+
+Animal::Animal(std::string t)
+{
+    type = t;
+}
+
+Animal::Animal(Animal &a)
+{
+    type = a.type;
+}
+
+void Animal::setType(std::string type)
+{
+    this->type = type;
+}
+Animal *Animal::operator=(Animal &x)
+{
+    x.type = this->type;
+    return (this);
+}
+Animal::Animal()
+{
+    
+}
+Animal::~Animal()
+{
+    
+}

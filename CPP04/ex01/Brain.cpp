@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 11:51:11 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/29 12:42:22 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/29 13:59:07 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ Brain::~Brain()
     std::cout << "Brain: this is a distractor!\n";
 }
 
-string *Brain::getIdeas() const
+string const *Brain::getIdeas() const
 {
-    return ((string *)this->ideas);
+    return (this->ideas);
 }
 void   Brain::setIdeas(string *fikra, int nb)
 {

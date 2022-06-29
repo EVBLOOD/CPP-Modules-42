@@ -1,29 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 22:38:00 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/29 13:59:14 by sakllam          ###   ########.fr       */
+/*   Created: 2022/06/28 21:12:10 by sakllam           #+#    #+#             */
+/*   Updated: 2022/06/28 22:11:17 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <string>
-using std::string;
+#include "Cat.hpp"
 
-class Brain
+
+Cat::Cat(std::string t)  : Animal("Cat")
 {
-    private:
-        string ideas[100];
-    public:
-        string const *getIdeas() const;
-        void   setIdeas(string *fikra, int nb);
-        Brain(string *ideas, int nb);
-        Brain(Brain &afkar);
-        Brain *operator=(Brain &x);
-        Brain();
-        ~Brain();
-};
+    (void)t;
+}
+
+Cat::Cat(Cat &a) : Animal("Cat")
+{
+    (void) a;
+}
+Cat *Cat::operator=(Cat &x)
+{
+    (void)x;
+    return (this);
+}
+Cat::Cat() : Animal("Cat")
+{
+    
+}
+
+Cat::~Cat()
+{
+}
+
+void Cat::makeSound(void) const
+{
+    std::cout << "cats don't bark :v\n";
+}
