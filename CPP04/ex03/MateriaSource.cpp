@@ -6,15 +6,16 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:09:27 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/29 17:41:53 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/29 18:34:53 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
+#include <iostream>
 
 MateriaSource::~MateriaSource()
 {
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < this->equipMAt; i++)
     {
         delete this->slote[i];
     }
@@ -67,13 +68,9 @@ void MateriaSource::learnMateria(AMateria* x)
 AMateria* MateriaSource::createMateria(std::string const & type)
 {
     AMateria *x = NULL;
-    if (type.compare("cure"))
-    {
+    if (type == "cure")
         x = new Cure(type);
-    }
-    else if (type.compare("ice"))
-    {
+    else if (type == "ice")
         x = new Ice(type);
-    }
     return (x);
 }

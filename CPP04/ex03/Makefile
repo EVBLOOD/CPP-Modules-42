@@ -6,11 +6,11 @@
 #    By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/28 21:10:45 by sakllam           #+#    #+#              #
-#    Updated: 2022/06/29 17:43:06 by sakllam          ###   ########.fr        #
+#    Updated: 2022/06/29 18:02:11 by sakllam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Animal
+NAME = cc
 
 SRC =	AMateria.cpp      Character.cpp     Cure.cpp          Ice.cpp           MateriaSource.cpp main.cpp
 INC = Character.hpp      ICharacter.hpp     Ice.hpp AMateria.hpp       Cure.hpp           IMateriaSource.hpp MateriaSource.hpp
