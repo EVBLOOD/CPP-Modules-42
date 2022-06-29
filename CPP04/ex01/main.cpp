@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 21:33:37 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/29 12:05:59 by sakllam          ###   ########.fr       */
+/*   Created: 2022/06/29 10:58:55 by sakllam           #+#    #+#             */
+/*   Updated: 2022/06/29 12:44:29 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <string>
-#include <iostream>
+#include "Cat.hpp"
+#include "Dog.hpp"
 
-class Animal
+int main()
 {
-    protected:
-        std::string type;
-    public:
-        std::string getType(void) const;
-        Animal(std::string t);
-        Animal(Animal &a);
-        void setType(std::string type);
-        Animal *operator=(Animal &x);
-        Animal();
-        virtual ~Animal();
-        virtual void makeSound(void) const;
-};
+    int x = 10;
+    Animal **okeh = new Animal*[x];
+
+    for (int i = 0; i < x/2; i++)
+        okeh[i] = new Dog();
+    for (int i = x/2; i < x; i++)
+        okeh[i] = new Cat();
+    for (int i = 0; i < x; i++)
+        delete okeh[i];
+    delete[] okeh;
+    // system ("leaks prog");
+}
