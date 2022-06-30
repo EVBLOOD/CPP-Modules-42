@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 13:47:40 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/30 15:39:16 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/30 19:44:20 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ std::ostream &operator<<(std::ostream &out, Form const &bur)
 }
 
 
-Form::Form(Form &x) : name(x.name), req_grade(x.req_grade), _signed(x._signed), req_gradeexec(x.req_gradeexec)
+Form::Form(Form &x) : name(x.name), _signed(x._signed), req_grade(x.req_grade), req_gradeexec(x.req_gradeexec)
 {
 }
 
-Form::Form(std::string x, int req_grade, int reqexec) : name(x), _signed(0), req_grade(req_grade), req_gradeexec(reqexec)
+Form::Form(std::string x, int req_grade, int reqexec) : name(x),   _signed(0), req_grade(req_grade), req_gradeexec(reqexec)
 {
     if (req_grade > 150 || reqexec > 150)
         throw GradeTooHighException();
@@ -53,7 +53,7 @@ int  Form::getreqGradeexec(void) const
     return (this->req_gradeexec);
 }
 
-bool Form::setsigned(bool x)
+void Form::setsigned(bool x)
 {
     this->_signed = x;
 }
@@ -67,10 +67,27 @@ bool Form::setsigned(bool x)
 //     this->req_gradeexec = x;
 // }
 
-Form::Form() : name(""), req_grade(1), _signed(0), req_gradeexec(1)
+Form::Form() : name(""), _signed(0), req_grade(1), req_gradeexec(1)
 {
 }
 
 Form::~Form()
 {
+}
+
+const char *Form::GradeTooHighException::what() const throw()
+{
+    return "Grade Too High";
+}
+const char *Form::GradeTooLowException::what() const throw()
+{
+    return "Grade Too Low";
+}
+
+void Form::beSigned(Bureaucrat &y)
+{
+    if (y.getGrade() > 150)
+        throw GradeTooLowException();
+    if (y.getGrade() <= req_grade)
+        _signed = true;
 }

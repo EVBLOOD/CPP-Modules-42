@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 16:15:19 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/30 18:17:32 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/30 18:41:05 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ PresidentialPardonForm::~PresidentialPardonForm()
 {
 }
 
-void PresidentialPardonForm::execute(Bureaucrat const & executor)
+void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
     if (this->getsigned() == false)
         throw NotSigned();

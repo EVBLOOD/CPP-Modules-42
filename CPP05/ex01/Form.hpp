@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 13:09:26 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/30 15:39:22 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/30 19:43:48 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "Bureaucrat.hpp"
 #include <iostream>
 
+class Bureaucrat;
 class Form 
 {
     private:
@@ -31,20 +32,21 @@ class Form
         int getreqGrade(void) const;
         bool getsigned(void) const;
         int  getreqGradeexec(void) const;
-        bool setsigned(bool x);
+        void setsigned(bool x);
         ~Form();
-    class GradeTooLowException : public Bureaucrat::GradeTooLowException
+   class GradeTooLowException : public std::exception
     {
+        public:
+            const char *what() const throw();
     };
-    class GradeTooHighException : public Bureaucrat::GradeTooHighException
+    class GradeTooHighException : public std::exception
     {
+        public:
+            const char *what() const throw();
+    };
+    class NotSigned : public std::exception
+    {
+        public:
+            const char *what() const throw();
     };
 };
-
-void Form::beSigned(Bureaucrat &y)
-{
-    if (y.getGrade() > 150)
-        throw GradeTooLowException();
-    if (y.getGrade() <= req_grade)
-        _signed = true;
-}

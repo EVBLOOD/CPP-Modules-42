@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 16:14:54 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/30 18:18:00 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/30 18:41:02 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ class PresidentialPardonForm : public Form
     public:
         PresidentialPardonForm(std::string target);
         ~PresidentialPardonForm();
-        void execute(Bureaucrat const & executor);
+        void execute(Bureaucrat const & executor) const;
 };
