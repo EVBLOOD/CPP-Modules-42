@@ -6,21 +6,21 @@
 #    By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/30 18:20:27 by sakllam           #+#    #+#              #
-#    Updated: 2022/06/30 18:20:56 by sakllam          ###   ########.fr        #
+#    Updated: 2022/06/30 19:35:49 by sakllam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = cc
 
-SRC =	Bureaucrat.cpp             Form.cpp                   PresidentialPardonForm.cpp RobotomyRequestForm.cpp    ShrubberyCreationForm.cpp  main.cpp
-INC = Bureaucrat.hpp             Form.hpp                   PresidentialPardonForm.hpp RobotomyRequestForm.hpp    ShrubberyCreationForm.hpp
+SRC =	Bureaucrat.cpp             Form.cpp                   Intern.cpp                 PresidentialPardonForm.cpp RobotomyRequestForm.cpp    ShrubberyCreationForm.cpp  main.cpp
+INC = Bureaucrat.hpp             Form.hpp                   PresidentialPardonForm.hpp RobotomyRequestForm.hpp    ShrubberyCreationForm.hpp Intern.hpp
 
 FLAGS = -Wall -Werror -Wextra -std=c++98
 
 all: $(NAME)
 
 $(NAME): $(SRC) $(INC)
-	clang++ $(FLAGS) $(SRC) -o $(NAME)
+	c++ $(FLAGS) $(SRC) -o $(NAME)
 
 clean:
 	rm -rf $(NAME)

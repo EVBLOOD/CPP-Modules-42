@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 20:09:32 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/30 15:36:13 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/30 19:42:09 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Bureaucrat
         Bureaucrat *operator=(Bureaucrat &c);
         int getGrade(void) const;
         const std::string getName(void) const;
-        void *setGrade(int x);
+        void setGrade(int x);
         ~Bureaucrat();
         void incrGrade(void);
         void decrGrade(void);
@@ -46,16 +46,3 @@ class Bureaucrat
 };
 
 std::ostream &operator<<(std::ostream &out, Bureaucrat const &bur);
-
-void Bureaucrat::signForm(Form &x)
-{
-    try
-    {
-       x.beSigned(*this);
-       std::cout << name << " signed " << x.getName() << "\n";
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << name << " couldn't sign " << x.getName() << "because " << e.what() << "\n";
-    }
-}

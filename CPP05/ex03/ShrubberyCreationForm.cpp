@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 18:18:48 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/30 18:19:04 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/30 18:40:48 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 {
 }
 
-void ShrubberyCreationForm::execute(Bureaucrat const & executor)
+void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
     if (this->getsigned() == false)
         throw NotSigned();
