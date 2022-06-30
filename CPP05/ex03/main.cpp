@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 16:15:30 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/30 18:40:43 by sakllam          ###   ########.fr       */
+/*   Created: 2022/06/29 23:46:15 by sakllam           #+#    #+#             */
+/*   Updated: 2022/06/30 15:42:06 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include "Form.hpp"
-#include <ctime>
-#include <stdlib.h>
+#include "Bureaucrat.hpp"
 
-class RobotomyRequestForm : public Form
+int main()
 {
-    private:
-        RobotomyRequestForm();
-    public:
-        RobotomyRequestForm(std::string target);
-        ~RobotomyRequestForm();
-        void execute(Bureaucrat const & executor) const;
-};
-
+    try
+    {
+        Bureaucrat x("test", 11);
+        x.incrGrade();
+        Form y("Title", 10, 1);
+        Form y1("Title", 115, 1);
+        x.signForm(y);
+        // Form y("Title", 0, 1);
+        std::cout << x;
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    return (0);
+}

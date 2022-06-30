@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
+/*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 16:15:19 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/30 18:41:05 by sakllam          ###   ########.fr       */
+/*   Created: 2022/06/30 16:15:24 by sakllam           #+#    #+#             */
+/*   Updated: 2022/06/30 18:18:34 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm() : Form("", "PresidentialPardonForm", 25, 5)
+RobotomyRequestForm::RobotomyRequestForm() : Form("", "RobotomyRequestForm", 72, 45)
 {
 }
 
-PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form(target, "PresidentialPardonForm", 72, 5)
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form(target, "RobotomyRequestForm", 72, 5)
 {
 }
 
-PresidentialPardonForm::~PresidentialPardonForm()
+RobotomyRequestForm::~RobotomyRequestForm()
 {
 }
 
-void PresidentialPardonForm::execute(Bureaucrat const & executor) const
+void RobotomyRequestForm::execute(Bureaucrat const & executor)
 {
     if (this->getsigned() == false)
         throw NotSigned();
     if (this->getreqGradeexec() < executor.getGrade())
         throw GradeTooLowException();
-    std::cout << this->getTarget() << " has been pardoned by Zaphod Beeblebrox.\n";
+    std::cout << "NIIIIIIIICE!!!!!\n";
+    srand(time(NULL));
+    if (rand() % 2)
+        std::cout << this->getTarget() << "successfull\n";
+    else
+        std::cout << this->getTarget() << "failed\n";
 }

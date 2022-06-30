@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 16:15:30 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/30 18:40:43 by sakllam          ###   ########.fr       */
+/*   Created: 2022/06/30 16:15:47 by sakllam           #+#    #+#             */
+/*   Updated: 2022/06/30 18:19:27 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "Form.hpp"
-#include <ctime>
-#include <stdlib.h>
+#include <fstream>
 
-class RobotomyRequestForm : public Form
+class ShrubberyCreationForm : public Form
 {
     private:
-        RobotomyRequestForm();
+        ShrubberyCreationForm();
     public:
-        RobotomyRequestForm(std::string target);
-        ~RobotomyRequestForm();
-        void execute(Bureaucrat const & executor) const;
+        ShrubberyCreationForm(std::string target);
+        ~ShrubberyCreationForm();
+        void execute(Bureaucrat const & executor);
 };
 
