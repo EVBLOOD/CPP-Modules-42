@@ -6,16 +6,28 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 12:18:03 by sakllam           #+#    #+#             */
-/*   Updated: 2022/07/01 18:05:24 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/07/01 21:05:20 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include 
 #include <ctype.h>
 #include <string.h>
 #include <iostream>
 #include <string>
 #include <iomanip>
+
+int countchars(std::string a, char x)
+{
+    int count = 0;
+    
+    for (int i = 0; a[i]; i++)
+    {
+        if (a[i] == x)
+            count++;
+    }
+    return (count);
+}
+
 bool typefloat(char *x)
 {
     int i;
@@ -35,6 +47,8 @@ bool typefloat(char *x)
                 return (true);
             break;
     }
+    if (countchars(x, '.') > 1)
+        return (false);
     if (x[i] == '-')
         i++;
     while (x[i])
@@ -61,7 +75,7 @@ bool typeint(char *x)
         i++;
     while (x[i])
     {
-        if (!isalpha(x[i]))
+        if (!isnumber(x[i]))
             break;
         i++;
     }
@@ -73,12 +87,12 @@ bool typeint(char *x)
     return (false);
 }
 
+
 bool typedouble(char *x)
 {
     int i;
     int j;
 
-    i = 0;
     switch (strlen(x))
     {
         case 4:
@@ -92,11 +106,14 @@ bool typedouble(char *x)
                 return (true);
             break;
     }
+    i = 0;
     if (x[i] == '-')
         i++;
+    if (countchars(x, '.') > 1)
+        return (false);
     while (x[i])
     {
-        if (!isnumber(x[i]) && (x[i] != '.' && x[i + 1] != '.' && i != 0))
+        if (!isnumber(x[i]) && x[i] != '.' && x[i + 1] != '.')
             break;
         i++;
     }
@@ -110,23 +127,15 @@ bool typedouble(char *x)
 
 bool typechar(std::string x)
 {
-    return (x.length() == 1 && isascii(x[0]));
+    return (x.length() == 1 && isascii(x[0]) && !isnumber(x[0]));
 }
-
-
-/*
-char: Non displayable
-int: 0
-float: 0.0f
-double: 0.0
-*/
-
-// void   counverttoint(std::string x)
 
 void   convertTochar(double a)
 {
     try
     {
+        if (a > 127 || a < 0)
+            throw std::invalid_argument( "char:impossible\n" );
         if (!isprint(static_cast<char>(a)))
         {
             std::cout << "char: Non displayable\n";
@@ -138,7 +147,7 @@ void   convertTochar(double a)
     }
     catch(const std::exception& e)
     {
-        std::cout << "char:impossible\n";
+        std::cout << e.what();
     }
     
 }
@@ -147,11 +156,13 @@ void   convertToint(double a)
 {
     try
     {
+        if (a > 2147483647 || a < -2147483648)
+            throw std::invalid_argument( "int:impossible\n" );
         std::cout << "int: " << static_cast<int>(a) << "\n";
     }
     catch(const std::exception& e)
     {
-       std::cout << "int:impossible\n";
+        std::cout << e.what();
     }
     
 }
@@ -238,18 +249,6 @@ void    converfromdouble(std::string x)
     }
 }
 
-// void    convertdouble(std::string x)
-// {
-//     try
-//     {
-//         /* code */
-//     }
-//     catch(const std::exception& e)
-//     {
-//         std::cerr << e.what() << '\n';
-//     }
-// }
-
 bool    impomsg(std::string x)
 {
     if (x.compare("-inf") && x.compare("-inff") && x.compare("nan")
@@ -281,29 +280,21 @@ int main(int argc, char *argv[])
     {
        if (typechar(argv[1]) || typefloat(argv[1]) || typedouble(argv[1]) || typeint(argv[1]))
        {
-           if (typeint(argv[1]))
-           {
-                std::cerr << "Type int\n";
-               counvertfromint(argv[1]);
-           }
-           else if (typechar(argv[1]))
-           {
-               std::cerr << "Type Char\n";
+           if (typechar(argv[1]))
                counvertfromchar(argv[1]);
-           }
-           else if (typefloat(argv[1]))
-           {
-               std::cerr << "Type float\n";
-               if (impomsg(argv[1]))
-                    return (1);
-               counvertfromfloat(argv[1]);
-           }
            else if (typedouble(argv[1]))
            {
-               std::cerr << "Type double\n";
                if (impomsg(argv[1]))
                     return (1);
                converfromdouble(argv[1]);
+           }
+           else if (typeint(argv[1]))
+               counvertfromint(argv[1]);
+           else if (typefloat(argv[1]))
+           {
+               if (impomsg(argv[1]))
+                    return (1);
+               counvertfromfloat(argv[1]);
            }
        }
        else
