@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 23:46:15 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/30 19:33:04 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/30 22:34:02 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main() {
     Form* rrf;
     rrf = someRandomIntern.makeForm("robotomy request", "Bender");
   }
-  // my test
+  // my tests
   {
       std::string types[4] = {
           "robotomy request",

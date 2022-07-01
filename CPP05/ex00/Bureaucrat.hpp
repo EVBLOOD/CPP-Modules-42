@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 20:09:32 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/30 14:17:46 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/30 22:29:32 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Bureaucrat
         Bureaucrat *operator=(Bureaucrat &c);
         int getGrade(void) const;
         const std::string getName(void) const;
-        void *setGrade(int x);
+        void setGrade(int x);
         ~Bureaucrat();
         void incrGrade(void);
         void decrGrade(void);

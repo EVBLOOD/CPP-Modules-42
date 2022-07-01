@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 23:46:15 by sakllam           #+#    #+#             */
-/*   Updated: 2022/06/29 23:48:09 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/06/30 22:30:00 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int main()
 {
     try
     {
-        Bureaucrat x("test", 1);
-        Bureaucrat y("EX02", 0);
+        Bureaucrat x("test", 2);
+        Bureaucrat y("EX02", 1);
         x.decrGrade();
         std::cout << x;
     }
