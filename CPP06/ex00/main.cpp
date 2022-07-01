@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 12:18:03 by sakllam           #+#    #+#             */
-/*   Updated: 2022/07/01 21:05:20 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/07/01 22:06:14 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -276,6 +276,7 @@ bool    impomsg(std::string x)
 
 int main(int argc, char *argv[])
 {
+    // std::cout << .; 
     if (argc == 2)
     {
        if (typechar(argv[1]) || typefloat(argv[1]) || typedouble(argv[1]) || typeint(argv[1]))
