@@ -6,7 +6,7 @@
 /*   By: sakllam <sakllam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 11:06:37 by sakllam           #+#    #+#             */
-/*   Updated: 2022/07/02 11:50:38 by sakllam          ###   ########.fr       */
+/*   Updated: 2022/07/02 11:56:21 by sakllam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ class Array
         }
         T &operator[](int i)
         {
-            if(i > static_cast<int>(this->n) || i < 0)
+            if(i >= static_cast<int>(this->n) || i < 0)
                 throw std::invalid_argument( "index is out of bounds" );
             return (x[i]);
         }
